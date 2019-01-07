@@ -1,0 +1,32 @@
+<%= form_with(model: daily, local: true) do |form| %>
+  <% if daily.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(daily.errors.count, "error") %> prohibited this daily from being saved:</h2>
+
+      <ul>
+      <% daily.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :daily_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :instructor %>
+    <%= form.text_field :instructor, id: :daily_instructor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.text_field :course, id: :daily_course %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

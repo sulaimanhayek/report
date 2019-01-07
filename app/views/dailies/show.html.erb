@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @daily.location %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @daily.instructor %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @daily.course %>
+</p>
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>
